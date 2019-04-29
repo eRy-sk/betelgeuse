@@ -17,7 +17,7 @@ class LinebotController < ApplicationController
     events.each do |event|
       case event
       when Line::Bot::Event::Follow
-        p event[:source]
+        p event['source']['userId']
     #   when Line::Bot::Event::Message
     #     case event.type
     #     when Line::Bot::Event::MessageType::Text
