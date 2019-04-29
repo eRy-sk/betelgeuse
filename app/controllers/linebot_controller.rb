@@ -12,7 +12,7 @@ class LinebotController < ApplicationController
       head :bad_request
     end
 
-    events = client.parse_events_from(body)
+    p events = client.parse_events_from(body)
 
     events.each do |event|
       case event
